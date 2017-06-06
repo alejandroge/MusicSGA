@@ -1,7 +1,7 @@
-INDIVIDUAL * EvaluatePopulation(INDIVIDUAL * ppltn);  // Iterates over the array of population
+INDIVIDUAL EvaluatePopulation(INDIVIDUAL * ppltn);  // Iterates over the array of population
 void EvaluateIndividual(INDIVIDUAL * ind);    // Inside here the evaluation function is set
 
-INDIVIDUAL * EvaluatePopulation(INDIVIDUAL * ppltn) {
+INDIVIDUAL EvaluatePopulation(INDIVIDUAL * ppltn) {
   unsigned short i, bestIndex;
 
   // Compute fitness for each individual
@@ -16,7 +16,7 @@ INDIVIDUAL * EvaluatePopulation(INDIVIDUAL * ppltn) {
     if( ppltn[i].fitness > ppltn[bestIndex].fitness ) bestIndex = i;
 
   // returns Individual with the best fitness
-  return ppltn+bestIndex;
+  return ppltn[bestIndex];
 }
 
 void EvaluateIndividual(INDIVIDUAL * ind) {
