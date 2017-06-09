@@ -3,9 +3,9 @@
 #include <time.h>
 
 char FLAG = 0;
-const unsigned short NPARAMS = 8;
-const unsigned short NIND = 10;
-const unsigned short NBITS[] = {3, 3, 3, 3, 3, 3, 3, 3};
+const unsigned short NPARAMS = 16;
+const unsigned short NIND = 100;
+const unsigned short NBITS[] = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
 const float P_MUTATION = 0.001;
 const float CROSSPROB = 0.8;
 #define LLIMIT 0
@@ -13,7 +13,8 @@ const float CROSSPROB = 0.8;
 double RANGE = ULIMIT - LLIMIT;
 #define GLIMIT 500
 #define ERROR 0.001
-const unsigned short SAMPLE[] = { 5, 5, 5, 3, 5, 7, 0, 7};
+//const unsigned short SAMPLE[] = { 15, 13, 11, 13, 11, 15, 13, 11, 13, 15, 13, 11, 13, 15, 13, 11};
+const unsigned short SAMPLE[] = { 11, 9, 13, 11, 9, 13, 11, 9, 11, 10, 13, 11, 10, 13, 11, 10};
 
 #include "INDIVIDUAL-init.h"
 #include "POPULATION-init.h"
@@ -22,6 +23,7 @@ const unsigned short SAMPLE[] = { 5, 5, 5, 3, 5, 7, 0, 7};
 #include "CROSSING.h"
 #include "MUTATION.h"
 #include "ELITISM.h"
+#include "WRITTER.h"
 
 int main(int argc, char const *argv[]) {
   //srand(time(NULL));
@@ -63,6 +65,7 @@ int main(int argc, char const *argv[]) {
   //showGenes(bestInd);
   //showFitness(bestInd);
   printf("\t"); showIndividual(&bestInd);
+  Writter(&bestInd);
 
   //showPopulation(ppltn);
 

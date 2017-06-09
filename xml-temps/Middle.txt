@@ -1,0 +1,11 @@
+    <backup>
+        <duration>8</duration>
+    </backup>
+    <note>
+        <rest/>
+        <duration>8</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+    </note>
+</measure>
+<measure number="2" width="536.73"> 

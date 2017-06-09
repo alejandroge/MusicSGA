@@ -1,0 +1,7 @@
+<note>
+    <rest/>
+    <duration>1</duration>
+    <voice>1</voice>
+    <type>eighth</type>
+    <staff>1</staff>
+</note>

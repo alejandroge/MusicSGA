@@ -25,7 +25,7 @@ void EvaluateIndividual(INDIVIDUAL * ind) {
 
   ind->fitness = 2;
   /*
-    r A B C D E F G
+    r G3 A3 B3 C4 D4 E4 F4 G4
     | | | | | | | |
     0 1 2 3 4 5 6 7
 
@@ -34,12 +34,11 @@ void EvaluateIndividual(INDIVIDUAL * ind) {
     The function to evaluate each individual is a list of different characteristics
     that describe the melody/individual. Currently it only checks for the starting,
     ending notes and the distance between the notes of the sample melody and the
-    generated one
-
+    generated one */
   // 1.- Starting note
-  if(ind->value[0] == 6) ind->fitness += 1;
+  if(ind->value[0] == SAMPLE[0]) ind->fitness += 1;
   // 2.- Ending note
-  if(ind->value[NIND-1] == 1) ind->fitness += 1;
+  if(ind->value[NIND-1] == SAMPLE[NIND-1]) ind->fitness += 1;
   // 3.- Distance
   for(i=0; i<NPARAMS; i++) {
     aux = ind->value[i] - SAMPLE[i];
@@ -47,10 +46,9 @@ void EvaluateIndividual(INDIVIDUAL * ind) {
     dist += aux/7;
   } //printf("%f\n", dist/2);
   ind->fitness += dist/2;
-  */
 
-  /* Alternative */
+  /* Alternative
   for(i=0; i<NIND; i++) {
     if(ind->value[i] == SAMPLE[i]) ind->fitness += 1;
-  }
+  } */
 }

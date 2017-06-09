@@ -1,0 +1,12 @@
+<note default-x="77.35" default-y="-25.00">
+    <pitch>
+        <step>A</step>
+        <octave>3</octave>
+    </pitch>
+    <duration>1</duration>
+    <voice>1</voice>
+    <type>eighth</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">begin</beam>
+</note>
